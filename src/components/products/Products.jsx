@@ -1,4 +1,4 @@
-import React, { useEffect,  } from 'react';
+import React, { useEffect  } from 'react';
 import { Grid } from '@material-ui/core';
 import Product from './product/Product.jsx'
 import useStyles from './productsStyle';
