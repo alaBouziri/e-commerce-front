@@ -8,15 +8,15 @@ function App() {
     <div >
       <Router>
         <Navbar/>
-        {/*<Switch>
+       <Switch>
        
                   <Route exact path="/" component={Products} />    
                     <Route exact path="/product/:id" component={ProductDetails} />
-        </Switch>*/}
-        <Products/>
+        </Switch>
       </Router>
     </div>
   );
 }
 
 export default App;
+ 
