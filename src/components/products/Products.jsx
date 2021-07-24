@@ -22,7 +22,7 @@ const Products = () => {
 
     const classes = useStyles();
     return (
-        loading ? ( <div>loadin ...</div> ) :
+        loading ? ( <div>loading ...</div> ) :
         error ? ( <div>{error}</div> ) :  (
         <main className={classes.content}>
             <div className={classes.toolbar} />
