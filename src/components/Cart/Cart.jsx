@@ -3,22 +3,26 @@ import { Container, Typography, Button, Grid } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import useStyles from "./cartStyles";
 import CartItem from './cartItem/CartItem'
+import { addToCart } from '../../actions/cartAction'
+import { useDispatch, useSelector } from 'react-redux';
 
-const Cart = (props) => {
-    const productId = props.match.params.id;
-    const qty = props.location.search
-    ? Number(props.location.search.split("=")[1])
-    : 1;
+const Cart = ({ location: { search }, match, history }) => {
+  const cartItems = useSelector((state) => state.cart.cartItems);
+  const dispatch = useDispatch();
+  // Take added product id from url
+  const productId = match.params.id;
+  const qty = search ? Number(search.split('=')[1]) : 1;
+
     //const [order , setOrder] = useState({});
     const classes = useStyles();
 
-    /*
+    
     useEffect(() => {
         if (productId)
-            dispatch (addToCart(productId,qty))
+            dispatch (addToCart (productId,qty))
         
-    }, [])
-*/
+    }, [dispatch,productId,qty])
+
 
   const renderEmptyCart = () => (
     <Typography>

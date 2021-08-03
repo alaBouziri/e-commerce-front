@@ -40,7 +40,7 @@ useEffect(() => {
     getData();
 }, [])
 */
-  console.log(loading);
+ 
   return (
    loading ? (
     <Typography variant="h4" gutterBottom>
