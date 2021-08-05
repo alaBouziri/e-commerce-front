@@ -1,24 +1,17 @@
-import React from 'react';
-import {Products,Navbar,ProductDetails,Cart} from './components'
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-
+import React from "react";
+import { Navbar } from "./components";
+import { BrowserRouter as Router, Switch } from "react-router-dom";
+import Routes from "./Routes";
 
 function App() {
   return (
-    <div >
-      <Router>
-        <Navbar/>
-       <Switch>
-       
-                    <Route exact path="/" component={Products} />    
-                    <Route exact path="/product/:id" component={ProductDetails} />
-                    <Route exact path="/cart" component={Cart} />    
-
-        </Switch>
-      </Router>
-    </div>
+    <Router>
+      <Navbar />
+      <Switch>
+        <Routes />
+      </Switch>
+    </Router>
   );
 }
 
 export default App;
- 
