@@ -4,7 +4,9 @@ import { productDetailsReducer } from '../reducer/productDetailsReducers';
 import {cartReducer} from '../reducer/cartReducers';
 import thunk from 'redux-thunk';
 
-const initialState={}
+
+const cartItems = localStorage.getItem('cartItems') || []  ;
+const initialState={cart : { cartItems }};
 
 const reducer = combineReducers ({
     productList : productListReducer,

@@ -8,7 +8,7 @@ import {
   IconButton,
   Button,
 } from "@material-ui/core";
-import { AddShoppingCart, Height } from "@material-ui/icons";
+import { AddShoppingCart } from "@material-ui/icons";
 import useStyles from "./ProductStyle";
 import { Link } from "react-router-dom";
 //import ProductDetails from "../productDetails/ProductDetails"
